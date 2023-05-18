@@ -1,5 +1,92 @@
 {
-    "seller": [
-
-    ]
+  "seller": [
+    {
+      "name": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "name": "aaa",
+      "password": "aaa",
+      "id": 2
+    },
+    {
+      "name": "syed zain",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "q",
+      "password": "aaaa",
+      "id": 5
+    },
+    {
+      "name": "aa",
+      "password": "aa",
+      "id": 6
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 12
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 13
+    },
+    {
+      "name": "",
+      "password": "",
+      "id": 14
+    },
+    {
+      "name": "ali",
+      "email": "ali@gmail.com",
+      "password": "123'",
+      "id": 15
+    },
+    {
+      "name": "eee",
+      "email": "ee",
+      "password": "eee",
+      "id": 16
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 17
+    }
+  ]
 }

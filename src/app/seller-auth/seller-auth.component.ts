@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Signup } from '../signup';
 import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router';
+import { signup } from '../datatype';
 
 @Component({
   selector: 'app-seller-auth',
@@ -12,13 +13,12 @@ export class SellerAuthComponent {
 
   constructor(private signup:SellerService, private router:Router){}
 
-  signupsave(data:any):void
+  signupsave(data:signup):void
   {
-    const signupdata = new Signup(data.name,data.string,data.password)
+    const signupdata = new Signup(data.name ,data.email,data.password)
     this.signup.signup(signupdata).subscribe((result)=>{
-        console.warn(result);
         if(result){
-           this.router.navigate['seller-home'];
+           this.router.navigate(['seller-home']);
 
         }
     });
