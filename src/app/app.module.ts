@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { CurdOperationComponent } from './curd-operation/curd-operation.component';
+import { ProductService } from './curd-operation/product.service';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HomeComponent,
     SellerAuthComponent,
     FooterComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+    CurdOperationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HttpClientModule
     
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
