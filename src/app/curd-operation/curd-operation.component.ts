@@ -8,6 +8,9 @@ import { ProductService } from './product.service';
 })
 export class CurdOperationComponent {
 
+fetching =false;
+
+
   ngOnInit()
   {
     this.onFetchProduct() 
@@ -49,10 +52,12 @@ export class CurdOperationComponent {
   }
 
   onFetchProduct(){
+    this.fetching =true
     this.product.fetchproduct().subscribe((response)=>{
         const data =  JSON.stringify(response)
         console.warn(data);
         this.products =  JSON.parse(data);
+        this.fetching =false
     },
        (err)=> console.warn(err)
     )
