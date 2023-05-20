@@ -13,35 +13,43 @@ fetching =false;
 
   ngOnInit()
   {
-    this.onFetchProduct() 
+    this.onFetchProduct() ;
+    
   }
 
   constructor(private product:ProductService) {
        
   }
   onsaveprodut(){
-    this.product.saveproduct(this.products).subscribe(  (result)=> console.warn(result)) ;
+    this.product.saveproduct(this.products).subscribe((result)=>console.log(result));
+    this.onFetchProduct() ;
   }
+
+
+  
   tabletitle = 'UX products'
   formstitle = 'Add Products'
   products = 
   [
 
-    {"id":"" , "name":"" , "price":""},
+    {id:"a" , name:"a" , price:"a"},
+    
    
   
 
   ];
 
 
-  onAddProduct(id:any,name:any,price:any)
+  onAddProduct(id1:any,name1:any,price1:any)
   {
      this.products.push({
-       id: id.value,
-       name: name.value,
-       price: price.value
-
-     })
+       id: id1,
+       name: name1,
+       price: price1
+     }),
+     this.onsaveprodut();
+     this.onFetchProduct() ;
+     console.log("Data in array" + id1,name1,price1);
   }
 
   onDeleteProduct(id:number){
@@ -55,11 +63,10 @@ fetching =false;
     this.fetching =true
     this.product.fetchproduct().subscribe((response)=>{
         const data =  JSON.stringify(response)
-        console.warn(data);
-        this.products =  JSON.parse(data);
+       this.products =  JSON.parse(data);
         this.fetching =false
     },
-       (err)=> console.warn(err)
+       (err)=> console.log(err)
     )
   }
 

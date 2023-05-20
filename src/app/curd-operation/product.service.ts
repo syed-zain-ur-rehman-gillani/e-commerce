@@ -5,11 +5,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductService {
-  url='https://curd-app-411-default-rtdb.firebaseio.com/products.json';
+
+  url='https://new-app-411-default-rtdb.firebaseio.com/app.json';
+
   constructor(private http:HttpClient) { }
 
 
   saveproduct(products:any[]){
+    console.log("dffg");
     return this.http.put(this.url,products)
   }
 
